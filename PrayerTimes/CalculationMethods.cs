@@ -11,6 +11,7 @@ namespace PrayerTimes
         MWL,
         Makkah,
         Egypt,
-        Custom
+        Kemenag,
+        Custom,
     }
 }
