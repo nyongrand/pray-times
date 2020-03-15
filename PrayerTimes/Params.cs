@@ -70,7 +70,7 @@ namespace PrayerTimes
                         ImsakTime = 10,
                         FajrAngle = 18,
                         MaghribSelector = Kind.Minute,
-                        MaghribParameter = 4,
+                        MaghribParameter = 0,
                         IshaSelector = Kind.Angle,
                         IshaParameter = 18,
                     };
@@ -120,7 +120,7 @@ namespace PrayerTimes
                     return new Params
                     {
                         ImsakTime = 10,
-                        FajrAngle = 16,
+                        FajrAngle = 19.5,
                         MaghribSelector = Kind.Minute,
                         MaghribParameter = 0,
                         IshaSelector = Kind.Angle,
@@ -129,13 +129,13 @@ namespace PrayerTimes
 
 
                 case CalculationMethods.Kemenag:
-                    // { 20, 1, 0, 0, 18 };
+                    // { 20, 0, 0, 0, 18 };
                     return new Params
                     {
                         ImsakTime = 10,
                         FajrAngle = 20,
-                        MaghribSelector = Kind.Minute,
-                        MaghribParameter = 4,
+                        MaghribSelector = Kind.Angle,
+                        MaghribParameter = 0,
                         IshaSelector = Kind.Angle,
                         IshaParameter = 18,
                     };
