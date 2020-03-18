@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PrayerTimes\PrayTimes.csproj" />
+    <ProjectReference Include="..\PrayTimes\PrayTimes.csproj" />
   </ItemGroup>
 
 </Project>
