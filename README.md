@@ -3,7 +3,7 @@
 
 I change the project type from .NET Portable to .NET Standard 1.0. 
 
-New feature included
+New feature included :
 - Sihat Kemenag (Indonesa) calculation methods,
 - Can use custom calculation methods without modify source code
 - Can tune times with offset
