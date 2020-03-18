@@ -1,4 +1,4 @@
-# prayer-times
+# Pray Times
 .NET Standard 1.0 library for calculating Muslim Pray Times. forked from https://github.com/stankovski/prayer-times
 
 I change the project type from .NET Portable to .NET Standard 1.0. 
