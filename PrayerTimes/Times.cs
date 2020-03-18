@@ -3,7 +3,7 @@
 
 using System;
 
-namespace PrayerTimes
+namespace PrayTimes
 {
     public class Times
     {

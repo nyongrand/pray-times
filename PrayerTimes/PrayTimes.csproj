@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <PackageTags>prayertimes, prayer, moslem, muslim</PackageTags>
+    <PackageTags>praytimes, prayertimes, pray, prayer, moslem, muslim</PackageTags>
     <PackageProjectUrl>https://github.com/nyongrand/prayer-times</PackageProjectUrl>
-    <Product>PrayerTimes</Product>
+    <Product>PrayTimes</Product>
     <Company />
     <Authors>Ibnu Hasan A.</Authors>
     <RepositoryUrl>https://github.com/nyongrand/prayer-times</RepositoryUrl>
-    <Description>Portable library for calculating Muslim Prayer Times. ported from http://praytimes.org/ with added ability to use custom calculation methods</Description>
+    <Description>Portable library for calculating Muslim Pray Times. ported from http://praytimes.org/ with added ability to use custom calculation methods</Description>
     <Copyright>Copyright (c) 2020</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageId>PrayTimes</PackageId>

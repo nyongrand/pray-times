@@ -25,12 +25,12 @@ PLEASE DO NOT REMOVE THIS COPYRIGHT BLOCK.
 
 using System;
 
-namespace PrayerTimes
+namespace PrayTimes
 {
     /// <summary>
     /// Prayer times calculator.
     /// </summary>
-    public class PrayerTimesCalculator
+    public class PrayTimesCalculator
     {
         const int numIterations = 1;    // number of iterations needed to compute times, this should never be more than 1;
         const int dhuhrMinutes = 0;     // minutes after mid-day for Dhuhr
@@ -46,7 +46,7 @@ namespace PrayerTimes
         /// </summary>
         /// <param name="latitude"></param>
         /// <param name="longitude"></param>
-        public PrayerTimesCalculator(double latitude, double longitude)
+        public PrayTimesCalculator(double latitude, double longitude)
         {
             _latitude = latitude;
             _longitude = longitude;
@@ -60,7 +60,7 @@ namespace PrayerTimes
         /// <param name="latitude"></param>
         /// <param name="longitude"></param>
         /// <param name="elevation"></param>
-        public PrayerTimesCalculator(double latitude, double longitude, double elevation)
+        public PrayTimesCalculator(double latitude, double longitude, double elevation)
         {
             _latitude = latitude;
             _longitude = longitude;
@@ -74,7 +74,7 @@ namespace PrayerTimes
         /// <param name="latitude"></param>
         /// <param name="longitude"></param>
         /// <param name="customParams"></param>
-        public PrayerTimesCalculator(double latitude, double longitude, Params customParams)
+        public PrayTimesCalculator(double latitude, double longitude, Params customParams)
         {
             _latitude = latitude;
             _longitude = longitude;
@@ -89,7 +89,7 @@ namespace PrayerTimes
         /// <param name="longitude"></param>
         /// <param name="elevation"></param>
         /// <param name="customParams"></param>
-        public PrayerTimesCalculator(double latitude, double longitude, double elevation, Params customParams)
+        public PrayTimesCalculator(double latitude, double longitude, double elevation, Params customParams)
         {
             _latitude = latitude;
             _longitude = longitude;
@@ -117,6 +117,9 @@ namespace PrayerTimes
         /// </summary>
         public HighLatitudeAdjustmentMethods HighLatitudeAdjustmentMethod { get; set; }
 
+        /// <summary>
+        /// Gets or sets manual minutes correction new double[] [0, 0, 0, 0, 0]
+        /// </summary>
         public double[] Offset { get; set; }
 
         ///<summary>
@@ -184,7 +187,7 @@ namespace PrayerTimes
         /// <summary>
         /// compute asr time
         /// </summary>
-        /// <param name="method"></param>
+        /// <param name="factor"></param>
         /// <param name="jDate"></param>
         /// <param name="time"></param>
         /// <returns></returns>
@@ -368,7 +371,7 @@ namespace PrayerTimes
                 times = ComputePrayerTimes(jDate, times);
 
             times = AdjustTimes(timeZone, times);
-            return ModifyFormat(times);
+            return ModifyFormat(TuneTimes(times));
         }
 
         /// <summary>
@@ -474,11 +477,20 @@ namespace PrayerTimes
             //		times[i] += offset[i] / 60;
             //	return times;
             //}
+            var offset = new double[]
+            {
+                Offset.Length > 0 ? Offset[0] : 0,
+                0,
+                Offset.Length > 1 ? Offset[1] : 0,
+                Offset.Length > 2 ? Offset[2] : 0,
+                0,
+                Offset.Length > 3 ? Offset[3] : 0,
+                Offset.Length > 4 ? Offset[4] : 0,
+            };
 
             for (int i = 0; i < times.Length; i++)
             {
-                times[i] = times[i];
-                times[i] += Offset[i] / 60;
+                times[i] += offset[i] / 60;
             }
             return times;
         }
