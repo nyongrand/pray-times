@@ -118,9 +118,9 @@ namespace PrayTimes
         public HighLatitudeAdjustmentMethods HighLatitudeAdjustmentMethod { get; set; }
 
         /// <summary>
-        /// Gets or sets manual minutes correction new double[] [0, 0, 0, 0, 0]
+        /// Gets or sets manual minutes correction new double[] { 0, 0, 0, 0, 0, }
         /// </summary>
-        public double[] Offset { get; set; }
+        public double[] Offset { get; set; } = new double[] { 0, 0, 0, 0, 0, };
 
         ///<summary>
         /// Returns the prayer times for a given date , the date format is specified as individual settings.
