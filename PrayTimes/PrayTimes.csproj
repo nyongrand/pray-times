@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
@@ -10,30 +10,21 @@
     <RepositoryUrl>https://github.com/nyongrand/prayer-times</RepositoryUrl>
     <Description># Pray Times
 .NET Standard 1.0 library for calculating Muslim Pray Times. forked from https://github.com/stankovski/prayer-times
-
-
 I change the project type from .NET Portable to .NET Standard 1.0. 
-
 New feature included :
-
 - Sihat Kemenag (Indonesa) calculation methods
-
 - Can use custom calculation methods without modify source code
-
 - Can tune times with offset
-
-
-
 The library has been ported from http://praytimes.org/</Description>
     <Copyright>Copyright (c) 2020</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageId>PrayTimes</PackageId>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
     <PackageReleaseNotes>Add time offset to manually adjust result.</PackageReleaseNotes>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
 </Project>
